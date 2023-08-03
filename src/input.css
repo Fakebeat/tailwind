@@ -7,3 +7,116 @@
     margin: 0 auto;
     padding: 1.5rem;
 }
+.btn{
+    display:inline-block;
+    padding:1rem;
+    border:1px solid transparent;
+}
+.btn.bg--blue{
+    @apply bg-asul hover:bg-[#0071bc] text-light
+}
+/*-----HEADER----*/
+/* @layer components{
+    .header{
+        @apply bg-gurey z-999
+    }
+    .container{
+        @apply flex justify-between
+    }
+    .header__branding{
+        @apply text-[1.5rem] text-light flex items-center gap-3
+    }
+    .header__nav{
+        @apply text-light absolute top-[3rem] w-full left-0  h-0
+    }
+    .header__nav ul{
+        @apply bg-gurey p-5 text-[1.5rem]
+    }
+} */
+
+@layer components{
+    .header{
+        @apply bg-dark fixed w-full
+    }
+    .header .header__wrapper{
+        @apply max-w-[90rem] mx-auto flex items-center justify-between
+    }
+    .header .branding{
+        @apply flex items-center gap-[1rem]
+    }
+    .header .branding h3{
+        @apply text-light text-[1.2rem] font-bold
+    }
+    .header .header__nav{
+        @apply absolute bg-dark top-[2rem] left-0 w-full flex flex-col max-h-[0rem] overflow-y-hidden transition-all
+        lg:static lg:flex-row lg:max-h-fit lg:w-fit
+    }
+    .header .header__nav.open{
+        @apply max-h-[28.5rem] transition-all overflow-y-scroll
+    }
+    .header .header__nav li{
+        @apply p-[1rem] lg:py-0
+    } 
+    .header .header__nav li a{
+        @apply text-light lg:text-gray-400 hover:text-light 
+    }
+    .header .header__nav li#search, .header .header__nav li#download{
+        @apply lg:hidden 
+    }
+    .toggle__menu{
+        @apply flex flex-col gap-[.2rem] lg:hidden
+    }
+    .toggle__menu span{
+        @apply w-[2rem] h-[.3rem] bg-light block rounded-full
+    }
+    .header .header__actions ul{
+        @apply hidden lg:flex
+    }
+    .header .header__actions input[type=search]::-ms-clear{
+        @apply lg:hidden
+    }
+    .header .header__actions input{
+        @apply lg:h-full  lg:bg-gray-600 lg:text-light lg:px-[2rem]
+    }
+    .header .header__actions input::placeholder{
+        @apply text-light
+    }
+    .header .header__actions input:focus{
+        @apply lg:outline-0
+    }
+    .header .header__actions li i{
+        @apply lg:text-light lg:translate-x-[1.5rem]
+    }
+}
+
+@layer components{
+    .banner .container{
+        @apply bg-[#242424]
+    }
+    .banner__text{
+        @apply text-light text-center
+    } 
+   
+}
+
+@layer components{
+    .dload{
+        @apply bg-gurey
+    }
+    .dload__text{
+        @apply text-light text-center
+    }
+    .dload__text h1{
+        @apply text-[3rem] font-thin leading-[3.5rem]
+    }
+    .dload__text p{
+        @apply font-thin
+    }
+    .dload__text span{
+        @apply font-semibold
+    }
+    .dload__btn{
+        @apply text-light m-1 
+    }
+
+}

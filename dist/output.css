@@ -568,57 +568,246 @@ video {
   }
 }
 
+.header {
+  position: fixed;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 37 43 / var(--tw-bg-opacity));
+}
+
+.header .header__wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  max-width: 90rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .branding {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header .branding h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.header .header__nav {
+  position: absolute;
+  top: 2rem;
+  left: 0px;
+  display: flex;
+  max-height: 0rem;
+  width: 100%;
+  flex-direction: column;
+  overflow-y: hidden;
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 37 43 / var(--tw-bg-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+@media (min-width: 1024px) {
+  .header .header__nav {
+    position: static;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    flex-direction: row;
+  }
+}
+
+.header .header__nav.open {
+  max-height: 28.5rem;
+  overflow-y: scroll;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.header .header__nav li {
+  padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .header .header__nav li {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.header .header__nav li a {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.header .header__nav li a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .header .header__nav li a {
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
+  }
+
+  .header .header__nav li#search, .header .header__nav li#download {
+    display: none;
+  }
+}
+
+.toggle__menu {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+
+@media (min-width: 1024px) {
+  .toggle__menu {
+    display: none;
+  }
+}
+
+.toggle__menu span {
+  display: block;
+  height: .3rem;
+  width: 2rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.header .header__actions ul {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .header .header__actions ul {
+    display: flex;
+  }
+
+  .header .header__actions input[type=search]::-ms-clear {
+    display: none;
+  }
+
+  .header .header__actions input {
+    height: 100%;
+    --tw-bg-opacity: 1;
+    background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+    padding-left: 2rem;
+    padding-right: 2rem;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
+.header .header__actions input::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.header .header__actions input::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .header .header__actions input:focus {
+    outline-width: 0px;
+  }
+
+  .header .header__actions li i {
+    --tw-translate-x: 1.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
+.banner .container {
+  --tw-bg-opacity: 1;
+  background-color: rgb(36 36 36 / var(--tw-bg-opacity));
+}
+
+.banner__text {
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dload {
+  --tw-bg-opacity: 1;
+  background-color: rgb(44 44 50 / var(--tw-bg-opacity));
+}
+
+.dload__text {
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dload__text h1 {
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 3.5rem;
+}
+
+.dload__text p {
+  font-weight: 100;
+}
+
+.dload__text span {
+  font-weight: 600;
+}
+
+.dload__btn {
+  margin: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .block {
   display: block;
+}
+
+.inline {
+  display: inline;
 }
 
 .flex {
   display: flex;
 }
 
-.h-0 {
-  height: 0px;
+.h-1 {
+  height: 0.25rem;
 }
 
-.h-0\.5 {
-  height: 0.125rem;
+.h-10 {
+  height: 2.5rem;
 }
 
-.w-\[2\.5rem\] {
-  width: 2.5rem;
+.w-\[2rem\] {
+  width: 2rem;
 }
 
-.w-\[5rem\] {
-  width: 5rem;
+.w-\[3rem\] {
+  width: 3rem;
 }
 
 .flex-col {
   flex-direction: column;
 }
 
-.items-center {
-  align-items: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.gap-\[\.3rem\] {
-  gap: .3rem;
-}
-
-.gap-\[\.5rem\] {
-  gap: .5rem;
-}
-
-.rounded-full {
-  border-radius: 9999px;
-}
-
-.bg-gurey {
-  --tw-bg-opacity: 1;
-  background-color: rgb(44 44 50 / var(--tw-bg-opacity));
+.gap-\[5px\] {
+  gap: 5px;
 }
 
 .bg-light {
@@ -626,13 +815,8 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.text-\[1\.7rem\] {
-  font-size: 1.7rem;
-}
-
-.text-light {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+.text-center {
+  text-align: center;
 }
 
 .container {
@@ -641,11 +825,40 @@ video {
   padding: 1.5rem;
 }
 
-.hover\:hidden:hover {
-  display: none;
+.btn{
+  display:inline-block;
+  padding:1rem;
+  border:1px solid transparent;
 }
 
-.hover\:bg-asul:hover {
+.btn.bg--blue {
   --tw-bg-opacity: 1;
   background-color: rgb(0 102 136 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
+.btn.bg--blue:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 113 188 / var(--tw-bg-opacity));
+}
+
+/*-----HEADER----*/
+
+/* @layer components{
+    .header{
+        @apply bg-gurey z-999
+    }
+    .container{
+        @apply flex justify-between
+    }
+    .header__branding{
+        @apply text-[1.5rem] text-light flex items-center gap-3
+    }
+    .header__nav{
+        @apply text-light absolute top-[3rem] w-full left-0  h-0
+    }
+    .header__nav ul{
+        @apply bg-gurey p-5 text-[1.5rem]
+    }
+} */
